@@ -1,17 +1,7 @@
-import { vh,vw } from '../utils/dimension';
+import { vw } from '../utils/dimension';
 import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#fff',
-    height: '100%',
-    marginTop: 50,
-  },
-  addButton: {
-    padding: vw(10),
-    margin: vw(10),
-  },
   expenseTile: {
-    // column with 3 cells
     flexDirection: 'row',
     justifyContent: 'space-between',
     backgroundColor: 'lightgrey',
@@ -24,9 +14,5 @@ const styles = StyleSheet.create({
     width: '22%',
     textAlign: 'center',
   },
-  formAdd: {
-    // display: "none",
-  },
-  
 });
 export default styles;

@@ -117,8 +117,8 @@ const styles = StyleSheet.create({
     borderColor: '#ccc',
     fontSize: 16,
     borderWidth: 1,
-    padding: 10,
-    margin: 10,
+    padding: vw(10),
+    margin: vw(10),
   },
   label: {
     color: 'black',

@@ -1,8 +1,8 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable react/react-in-jsx-scope */
 
-import { Alert, Button, ScrollView, Text, View } from 'react-native';
-import styles from './styles';
+import { Alert, TouchableOpacity, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { vh,vw } from '../utils/dimension';
 
 export default function ExpenseComponent({
     expenses,
@@ -44,7 +44,7 @@ const ExpenseListTile = ({
             <Text style={styles.expenseTileText}>{expense.name}</Text>
             <Text style={styles.expenseTileText}>{expense.category}</Text>
             <Text style={styles.expenseTileText}>{expense.amount}</Text>
-            <Button
+            <TouchableOpacity
                 onPress={() => {
                     Alert.alert('Delete', 'Are you sure you want to delete?', [
                         {
@@ -72,8 +72,37 @@ const ExpenseListTile = ({
                         },
                     ]);
                 }}
-                title="Delete"
-            />
+            style={styles.deleteButton}
+            >
+                <Text style={styles.deleteText}>Delete</Text>
+                </TouchableOpacity>
         </View>
     );
 };
+const styles = StyleSheet.create({
+    expenseTile: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        backgroundColor: 'lightgrey',
+        width: '95%',
+        padding: vw(10),
+        margin: vw(10),
+        borderRadius:vw(10),
+      },
+      expenseTileText: {
+        fontSize: 20,
+        width: '22%',
+        textAlign: 'center',
+      },
+      deleteButton:{
+        backgroundColor:'red',
+        alignItems:'center',
+        justifyContent:'center',
+        padding:vw(4),
+        borderRadius:vw(6),
+      },
+      deleteText:{
+        color:'white',
+        fontWeight:'bold',
+      },
+});
