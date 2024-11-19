@@ -83,7 +83,7 @@ export default function Addform({
             setAmount('');
             setCategory('Food');
           }}>
-          <Text style={styles.cancelText}> Add Expense</Text>
+          <Text style={styles.cancelText}>Add Expense</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.cancelButton}
